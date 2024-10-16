@@ -1,0 +1,42 @@
+body {
+    font-family:Arial, Helvetica, sans-serif,;
+    background-color: #f0f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100;
+    background-image:url(slugcat.png);
+    background-size: cover;
+}
+
+p{
+color: #818186;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: Courier New, Courier, monospace;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border:#818186;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.container {
+    background-color: #1c1c25;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
