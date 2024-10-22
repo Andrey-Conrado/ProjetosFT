@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'DS-DIGI';
+    src: url('ds_digital/DS-DIGI.TTF') format('truetype'),
+         url('ds_digital/DS-DIGIB.TTF') format('truetype'),
+         url('ds_digital/DS-DIGII.TTF') format('truetype'),
+         url('ds_digital/DS-DIGIT.TTF') format('truetype');
+}
+
+body{
+    background-image: linear-gradient(gray, black);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.calc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 200px;
+    background-color: black;
+    border-radius: 5px;    
+    padding: 20px;
+}
+
+.display{
+    background-color: white;
+    height: 40px;
+    width: auto;
+    word-wrap: normal;
+    overflow: hidden;
+    border-radius: 5px;
+    font-family: 'DS-DIGI', sans-serif;
+    font-size: 30px;
+}
+
+.btn{
+    font: 1em sans-serif;
+    color: #fff;
+    background-image: linear-gradient(gray, black);
+    border-radius: 5px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
