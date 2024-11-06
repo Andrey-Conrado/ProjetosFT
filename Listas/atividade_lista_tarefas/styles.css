@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 1000px;
+  max-width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background: #218838;
+}
+
+#kanbanBoard {
+  display: flex;
+  gap: 10px;
+}
+
+.coluna {
+  flex: 1;
+  background: #e2e2e2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.coluna h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+#open h2 { background-color: #ffeb3b; color: #333; }
+#bid h2 { background-color: #f3a025; color: #fff; }
+#inProgress h2 { background-color: #2196f3; color: #fff; }
+#done h2 { background-color: #4caf50; color: #fff; }
+
+.taskList {
+  min-height: 150px;
+  padding: 5px;
+  background: #f4f4f4;
+  border-radius: 0 0 5px 5px;
+}
+
+.task {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task button {
+  background: #dc3545;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50px;
+}
+
+.task button:hover {
+  background: #c82333;
+}
+
+#open .task { border-left: 5px solid #ffcc00; }
+#bid .task { border-left: 5px solid #ff5722; }
+#inProgress .task { border-left: 5px solid #2196f3; }
+#done .task { border-left: 5px solid #4caf50; }
