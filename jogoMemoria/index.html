@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1 id="jtxt">Jogo da Memória</h1>
+    <div class="board"></div>
+    <p id="attempts">Tentativas: 0</p>
+    <div id="history">
+      <h2>Histórico de Rodadas</h2>
+      <ul id="round-history"></ul>
+    </div>
+    <button id="restart">Reiniciar Jogo</button>
+    <p id="congrats" class="hidden">🎉 Parabéns! Você encontrou todos os pares! 🎉</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
