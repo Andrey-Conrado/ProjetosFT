@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankSE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="assets_bank/assets/img_logo.png" alt="BankSE Logo">
+        </div>
+        <div class="info-usuario">
+            <span>Olá, Fulano</span>
+            <div class="user-avatar">
+                <img src="assets_bank/assets/icon_user_.png" alt="User Icon">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="cartao-saldo">
+            <div class="rotulo-saldo">Conta</div>
+            <div class="valor-saldo">R$ <span id="saldo">0,00</span></div>
+            <div class="saldo-atualizado">Última atualização: <span id="ultima-atualizacao"></span></div>
+        </div>
+
+        <div class="resumo-transacoes">
+            <div class="cartao-resumo">
+                <div class="cartao-titulo">
+                    <span>Entradas</span>
+                </div>
+                <div class="entrada">R$ <span id="total-entradas">0,00</span></div>
+            </div>
+            <div class="cartao-resumo">
+                <div class="cartao-titulo">
+                    <span>Saídas</span>
+                </div>
+                <div class="saida">R$ <span id="total-saidas">0,00</span></div>
+            </div>
+        </div>
+
+        <div class="banner-propaganda">
+            <div class="banner-img">
+                <img src="assets_bank/assets/img_seguros.png" alt="Seguros para família">
+            </div> 
+            <div class="lista-transacoes">
+            <h3 class="titulo-transacoes">
+                <i class="fas fa-list"></i> Histórico de Transações
+            </h3>
+            <div class="sem-transacoes" id="sem-transacoes">
+                <i class="fas fa-inbox"></i>
+                Não constam transações
+            </div>
+            <div id="transacoes"></div>
+        </div>
+        </div>
+
+        <div class="botoes-acao">
+            <button class="botao-acao" id="botao-pix">
+                <img src="assets_bank/assets/icon_pix_.png" alt="">
+                <span>Área PIX</span>
+            </button>
+            <button class="botao-acao" id="botao-pagar">
+                <img src="assets_bank/assets/icon _dollar_.png" alt="">
+                <span>Pagar</span>
+            </button>
+            <button class="botao-acao" id="botao-investir">
+                <img src="assets_bank/assets/icon _graph_.png" alt="">
+                <span>Investir</span>
+            </button>
+        </div>
+
+        <div class="area-pix" id="area-pix">
+            <div class="botoes-aba">
+                <button class="botao-aba ativo" data-aba="receber">
+                    <img src="assets_bank/assets/_icon _receber_.png" alt="">Receber
+                </button>
+                <button class="botao-aba" data-aba="transferir">
+                    <img src="assets_bank/assets/icon _enviar_.png" alt="">Transferir
+                </button>
+            </div>
+
+            <form class="formulario-pix ativo" id="formulario-receber">
+                <div class="grupo-formulario">
+                    <label><i class="fas fa-id-card"></i> CNPJ/CPF</label>
+                    <input type="text" id="receber-documento" placeholder="Digite o documento">
+                </div>
+                <div class="grupo-formulario">
+                    <label><i class="fas fa-dollar-sign"></i> Valor R$</label>
+                    <input type="number" step="0.01" id="receber-valor" placeholder="0,00">
+                </div>
+                <div class="mensagem-erro">
+                    <i class="fas fa-exclamation-circle"></i>
+                   Todos os campos devem ser preenchidos
+                </div>
+                <button type="submit" class="botao-enviar">
+                    RECEBER
+                </button>
+            </form>
+
+            <form class="formulario-pix" id="formulario-transferir">
+                <div class="grupo-formulario">
+                    <label><i class="fas fa-key"></i> Chave PIX</label>
+                    <input type="text" id="transferir-chave" placeholder="Digite a chave PIX">
+                </div>
+                <div class="grupo-formulario">
+                    <label><i class="fas fa-dollar-sign"></i> Valor R$</label>
+                    <input type="number" step="0.01" id="transferir-valor" placeholder="0,00">
+                </div>
+                <div class="mensagem-erro">
+                    <i class="fas fa-exclamation-circle"></i>
+                    Todos os campos devem ser preenchidos
+                </div>
+                <button type="submit" class="botao-enviar">
+                  TRANSFERIR
+                </button>
+            </form>
+        </div>
+
+       
+    </div>
+
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+<footer class="rodape">
+    <div class="cont-rodape">
+        <span>© 2024 BankSE - Desenvolvido por: Josimar Santos</span>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

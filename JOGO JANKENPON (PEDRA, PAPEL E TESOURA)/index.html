@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura - Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pedra, Papel e Tesoura Online</h1>
+        
+        <!-- Tela de conexão -->
+        <div id="connectionScreen">
+            <div class="connection-form">
+                <input type="text" id="roomId" placeholder="Digite o ID da sala" value="sala1">
+                <button onclick="conectarSala()">Conectar à Sala</button>
+            </div>
+        </div>
+
+        <!-- Tela de espera -->
+        <div id="waitingScreen" class="hidden">
+            <h2>Aguardando outro jogador...</h2>
+            <div>ID da Sala: <span id="currentRoom"></span></div>
+        </div>
+
+        <!-- Tela do jogo -->
+        <div id="gameScreen" class="hidden">
+            <div class="score">
+                Placar: Você: <span id="myScore">0</span> | 
+                Oponente: <span id="opponentScore">0</span>
+            </div>
+
+            <div class="player-section">
+                <h2>Sua vez</h2>
+                <div class="choices">
+                    <button onclick="fazerEscolha('pedra')" class="choice-btn">✊ Pedra</button>
+                    <button onclick="fazerEscolha('papel')" class="choice-btn">✋ Papel</button>
+                    <button onclick="fazerEscolha('tesoura')" class="choice-btn">✌️ Tesoura</button>
+                </div>
+                <div id="myChoice" class="result"></div>
+            </div>
+
+            <div id="gameResult" class="result hidden"></div>
+            <button onclick="jogarNovamente()" id="resetButton" class="hidden">Jogar Novamente</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
